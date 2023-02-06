@@ -1,0 +1,142 @@
+# Request to GPT: Create a differential expression analysis using r and DESEq2 as library to analyze the following csv data where CO is control and CD is treatment with Cadmium and the first column is the row.name:  
+
+GEN,XI_CO_r1_04,XI_CO_r2_05,XI_CO_r3_06,XI_CD_r1_01,XI_CD_r2_02,XI_CD_r3_03
+# Dapma7bEVm003967t1,110,149,375,1392,2896,608
+# Dapma7bEVm010870t1,1772,1020,1554,3630,7809,1667
+# Dapma7bEVm007317t1,19,28,145,26,121,96
+# Dapma7bEVm004869t1,15122,9493,14685,5539,15599,4686
+# Dapma7bEVm010450t1,4880,3300,5624,3185,6900,1888
+# Dapma7bEVm014691t1,0,0,0,0,2,0
+# Dapma7bEVm018497t1,2179,1670,4727,5312,8893,2426
+# Dapma7bEVm003822t1,2658,1920,4234,5478,9149,2551
+# Dapma7bEVm023501t1,0,0,0,0,0,0
+# Dapma7bEVm018560t1,35873,24841,42325,65058,112695,30376
+# Dapma7bEVm005765t1,424,189,1012,910,1100,495
+# Dapma7bEVm012887t1,2,0,2,1,4,3
+# Dapma7bEVm015306t1,15228,9988,20032,25529,42133,12376
+# Dapma7bEVm012106t1,639,401,793,1135,1967,502
+# Dapma7bEVm027149t1,2,0,0,2,0,0
+# Dapma7bEVm017126t1,1,1,2,0,10,0
+# Dapma7bEVm025883t1,41,28,46,80,111,32
+# Dapma7bEVm008764t1,2,2,6,17,8,0
+# Dapma7bEVm010721t1,310,254,417,781,1014,331
+# Dapma7bEVm012095t1,3,0,2,4,6,4
+# Dapma7bEVm001996t1,267,179,318,447,727,232
+# Dapma7bEVm004119t1,864,574,1175,1082,2000,534
+# Dapma7bEVm016957t1,0,0,0,0,0,0
+# Dapma7bEVm013128t1,0,0,1,1,1,0
+# Dapma7bEVm000185t1,2775,1979,3931,4150,7544,2225
+# Dapma7bEVm001247t1,94,85,126,243,363,83
+# Dapma7bEVm024355t1,55,47,75,87,141,54
+# Dapma7bEVm004907t1,231,130,233,302,525,119
+# Dapma7bEVm026642t1,33,21,42,37,79,18
+# Dapma7bEVm006214t1,1214,982,1821,2193,3861,1096
+# Dapma7bEVm004116t1,788,609,1269,1523,2428,733
+# Dapma7bEVm010337t1,645,1207,3083,1794,6014,2144
+# Dapma7bEVm024629t1,0,0,0,6,4,0
+# Dapma7bEVm011373t1,72,36,123,106,183,60
+# Dapma7bEVm000708t1,813,447,671,1554,2586,631
+# Dapma7bEVm015504t1,482,405,686,1216,1970,520
+# Dapma7bEVm016200t1,4,7,1,14,6,6
+# Dapma7bEVm014096t1,0,0,2,1,1,0
+# Dapma7bEVm024203t1,0,0,4,8,0,0
+# Dapma7bEVm024975t1,2,1,4,4,2,0
+# Dapma7bEVm009148t1,5,4,7,9,16,0
+# Dapma7bEVm019358t1,6,5,11,6,29,1
+# Dapma7bEVm001907t1,381,327,506,552,974,304
+# Dapma7bEVm022882t1,1,0,0,0,0,0
+# Dapma7bEVm021198t1,4,0,4,4,4,2
+# Dapma7bEVm007365t1,851,643,1128,1528,2327,751
+# Dapma7bEVm019866t1,0,0,0,0,0,0
+# Dapma7bEVm015103t1,1442,904,1794,2037,3483,902
+# Dapma7bEVm026432t1,0,0,2,7,7,5
+# Dapma7bEVm001706t1,1030,840,1389,1816,2647,931
+# Dapma7bEVm027745t1,76,86,182,77,316,144
+# Dapma7bEVm022801t1,2,0,0,0,3,0
+# Dapma7bEVm025642t1,0,1,0,0,0,0
+# Dapma7bEVm004703t1,703,539,918,1486,2425,664
+# Dapma7bEVm029174t1,28,14,43,84,212,55
+# Dapma7bEVm016954t1,1,2,0,3,4,0
+# Dapma7bEVm015054t1,1401,493,1037,1687,3312,996
+# Dapma7bEVm000832t1,307,366,861,2830,4558,1010
+# Dapma7bEVm012057t1,15,20,45,43,95,24
+# Dapma7bEVm013646t1,0,3,0,0,0,0
+# Dapma7bEVm012091t1,24,26,48,54,109,39
+# Dapma7bEVm017751t1,0,0,0,0,0,0
+# Dapma7bEVm000045t1,4722,4200,8594,13674,23607,6538
+# Dapma7bEVm011951t1,158,112,196,303,518,121
+# Dapma7bEVm026393t1,0,0,0,0,0,0
+# Dapma7bEVm023366t1,0,0,2,1,2,0
+# Dapma7bEVm019558t1,0,0,0,0,0,0
+# Dapma7bEVm017465t1,0,0,0,0,0,0
+# Dapma7bEVm013537t1,10,14,10,23,29,9
+# Dapma7bEVm004219t1,792,572,1200,1665,2937,901
+# Dapma7bEVm024293t1,0,0,0,3,3,0
+# Dapma7bEVm025494t1,0,0,0,1,0,2
+# Dapma7bEVm000970t1,82,60,152,447,820,201
+# Dapma7bEVm006144t1,832,561,912,1139,2093,502
+# Dapma7bEVm026316t1,218,188,329,533,906,222
+# Dapma7bEVm004865t1,1035,687,1219,1589,2364,764
+# Dapma7bEVm002227t1,10266,5977,7990,17632,37285,8339
+# Dapma7bEVm024321t1,0,0,0,0,0,0
+# Dapma7bEVm014261t1,0,0,0,5,7,4
+# Dapma7bEVm007301t1,366,230,389,635,1137,332
+# Dapma7bEVm029378t1,103,64,168,221,359,106
+# Dapma7bEVm021457t1,0,0,0,0,0,0
+# Dapma7bEVm007076t1,15,16,8,38,63,8
+# Dapma7bEVm001276t1,636,447,4978,12433,16295,5423
+# Dapma7bEVm011513t1,0,0,0,0,0,0
+# Dapma7bEVm023554t1,0,0,0,0,0,0
+# Dapma7bEVm007626t1,386,265,390,580,608,192
+# Dapma7bEVm011928t1,1316,849,2116,2662,4197,1326
+# Dapma7bEVm012740t1,0,1,2,2,2,3
+# Dapma7bEVm004863t1,166,97,164,255,404,128
+# Dapma7bEVm004564t1,1451,1035,1839,1945,3129,878
+# Dapma7bEVm011088t1,1801,1096,2241,3023,4911,1401
+# Dapma7bEVm026182t1,1,0,1,5,2,0
+# Dapma7bEVm014712t1,2,1,5,17,22,7
+# Dapma7bEVm006121t1,708,416,653,1359,2705,723
+# Dapma7bEVm017316t1,1,0,0,0,0,0
+# Dapma7bEVm001059t1,1472,992,1521,1540,2728,843
+# Dapma7bEVm000928t1,7143,5340,9369,14272,20311,6225
+# Dapma7bEVm030098t1,0,0,0,0,0,0
+# Dapma7bEVm014153t1,0,0,0,0,0,0
+
+
+
+
+## Here the output of ChatGPT:
+
+# Load library
+library(DESeq2)
+
+# Load data
+data <- read.csv("sample_gtp.csv")
+
+# Subset data for gene expression values
+expression_data <- data[,2:7]
+rownames(expression_data) <- data[,1]
+
+# Create a sample table indicating the group assignment for each sample
+sample_table <- data.frame(
+  condition = c(rep("CO", 3), rep("CD", 3)),
+  row.names = colnames(expression_data)
+)
+
+# Create DESeq2 object
+deseq2_obj <- DESeqDataSetFromMatrix(countData = expression_data,
+                                     colData = sample_table,
+                                     design = ~condition)
+
+# Run the differential expression analysis
+deseq2_result <- DESeq(deseq2_obj)
+
+# Extract results
+res <- results(deseq2_result)
+
+# Add adjusted p-value
+res$padj <- p.adjust(res$pvalue, method = "BH")
+
+# Subset significant genes (adjust p-value threshold as needed)
+sig_genes <- subset(res, padj < 0.05)
+
