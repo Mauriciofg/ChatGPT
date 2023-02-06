@@ -1,0 +1,36 @@
+
+# Installation DESeq2:
+# https://bioconductor.org/packages/release/bioc/html/DESeq2.html
+
+library("DESeq2")
+
+# Load data
+# Use the same data in csv format located in ChatGPT_query_and_output file
+# https://github.com/Mauriciofg/ChatGPT/blob/main/ChatGPT_query_and_output
+
+conteoscd<-read.csv("sample_gtp.csv", header = T,row.names = 1)
+
+countdata<-conteoscd[, c(1:6)]
+
+# Reference for ordering (to avoid confussion between control and Cd condition)
+coldata = data.frame(
+  #crear data frame con dos columnas
+  row.names = colnames( countdata ),
+  #El vector tendrÃ¡ como nombres de columnas el nombre de las filas del vector countdata
+  tipo = c("toro","toro","toro","caballo","caballo","caballo"))
+
+# Creating a DESEq2 matrix
+dds<- DESeqDataSetFromMatrix(countdata,
+                             colData = coldata,
+                             design = ~ tipo)
+
+#Calculating differential expression.
+dds <- DESeq(dds)
+# Extracting results
+resDESeq2 <- results(dds)
+# Converting into data.frame to filter.
+resDESeq2<-as.data.frame(resDESeq2)
+# Delete rows with NAs
+resDESeq2<-na.omit(resDESeq2)
+# Filtering by padj < 0.05
+DEGsdeseq2<-resDESeq2[resDESeq2$padj< 0.05,]
